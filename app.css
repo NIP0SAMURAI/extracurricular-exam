@@ -1,67 +1,79 @@
+/* Reset default margin and padding for body and set font family */
 html,
 body {
   margin: 0;
   padding: 0;
   font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
     "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
-  background-color: rgb(245, 226, 215);
+  background-color: rgb(245, 226, 215); /* Set background color */
 }
 
+/* Styling for the header */
 header {
-  background-color: rgb(165, 167, 167);
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.25);
+  background-color: rgb(165, 167, 167); /* Gray background color */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.25); /* Add a subtle box shadow */
 }
+
+/* Styling for the main heading */
 h1 {
   margin-top: 1em;
   margin-left: 1em;
-  color: #ea7303;
+  color: #ea7303; /* Set heading color to orange */
   font-size: 50px;
 }
+
+/* Styling for links (anchors) */
 a {
   bottom: 1em;
   left: 1.5em;
   padding: 0.5em 1em;
-  color: #ffffff;
-  background-color: #ea7303;
+  color: #ffffff; /* Text color for links */
+  background-color: #ea7303; /* Background color for links */
   text-decoration: none;
   border-radius: 5px;
-  transition: background-color 0.3s, transform 0.3s;
+  transition: background-color 0.3s, transform 0.3s; /* Add smooth transitions */
 }
 
+/* Hover effect for links */
 a:hover {
-  background-color: #743700;
+  background-color: #743700; /* Darker background color on hover */
 }
 
+/* Styling for the grid layout */
 .grid {
   display: grid;
   grid-template-columns: repeat(
     auto-fill,
     minmax(300px, 1fr)
-  ); /* Adjust the minmax value for wider items */
-  gap: 1em;
-  padding: 1.5em;
+  ); /* Adjust column width */
+  gap: 1em; /* Gap between grid items */
+  padding: 1.5em; /* Padding around the grid */
 }
 
+/* Styling for individual grid items */
 .grid-item {
-  box-shadow: 1px 1px 8px rgba(0, 0, 0, 0.25);
-  padding: 1.5em;
-  background-color: #f1f1f1;
-  transition: 0.5s;
-  animation: fadeIn 0.5s;
-  border-radius: 10px;
+  box-shadow: 1px 1px 8px rgba(0, 0, 0, 0.25); /* Add a subtle box shadow */
+  padding: 1.5em; /* Padding inside each grid item */
+  background-color: #f1f1f1; /* Light gray background color */
+  transition: 0.5s; /* Smooth transition effect */
+  animation: fadeIn 0.5s; /* Fade-in animation */
+  border-radius: 10px; /* Rounded corners */
 }
 
+/* Hover effect for grid items */
 .grid-item:hover {
-  transform: scale(1.03);
+  transform: scale(1.03); /* Slightly enlarge on hover */
 }
 
+/* Styling for images within grid items */
 .grid-item img {
   width: 100%;
-  height: 200px;
-  object-fit: cover;
-  border-radius: 10px;
+  height: 200px; /* Set image height */
+  object-fit: cover; /* Maintain aspect ratio and cover the container */
+  border-radius: 10px; /* Rounded corners for images */
 }
 
+/* Keyframe animation for fade-in effect */
 @keyframes fadeIn {
   from {
     opacity: 0;

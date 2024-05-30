@@ -11,6 +11,7 @@ async function initApp() {
   displayProjectsGrid(projects);
 }
 
+// Fetch projects data from an external API
 async function getProjects() {
   const response = await fetch(
     "https://examprogrammingrasmus.nipomultimedia.dk/wp-json/wp/v2/projects?acf_format=standard"
@@ -19,6 +20,7 @@ async function getProjects() {
   return data;
 }
 
+// Display projects as a list (not currently used)
 function displayProjects(projects) {
   const projectsList = document.querySelector("#project-list");
 
@@ -27,12 +29,13 @@ function displayProjects(projects) {
     projectsList.insertAdjacentHTML(
       "beforeend",
       `
-      <li>${project.title.rendered} </li>
+      <li>${project.title.rendered}</li>
       `
     );
   }
 }
 
+// Display projects in a grid format
 function displayProjectsGrid(projects) {
   const projectsGrid = document.querySelector("#project-grid");
   for (const project of projects) {
@@ -44,10 +47,9 @@ function displayProjectsGrid(projects) {
       <img src="${project.acf.image}" alt="${project.title.rendered}"></img>
       <h2>${project.title.rendered}</h2>
       <p>${project.acf.description}</p>
-     <p>${project.acf.client}</p>
-    
-       <p>${project.acf.type}</p>
-  <p><a href="${project.acf.link}" target="_blank">View Project</a></p>
+      <p>${project.acf.client}</p>
+      <p>${project.acf.type}</p>
+      <p><a href="${project.acf.link}" target="_blank">View Project</a></p>
     </article>
     `
     );
